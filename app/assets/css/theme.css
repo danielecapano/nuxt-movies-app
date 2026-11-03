@@ -1,0 +1,60 @@
+@theme inline {
+  /* ---------- Primary ---------- */
+
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+
+  /* ---------- Background ---------- */
+
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+
+  /* ---------- Surface ---------- */
+
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+
+  /* ---------- Tonal Surfaces ---------- */
+
+  --color-surface-tonal: var(--surface-tonal);
+  --color-surface-tonal-low: var(--surface-tonal-low);
+  --color-surface-tonal-container: var(--surface-tonal-container);
+  --color-surface-tonal-high: var(--surface-tonal-high);
+  --color-surface-tonal-highest: var(--surface-tonal-highest);
+
+  /* ---------- Outline ---------- */
+
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  /* ---------- Status ---------- */
+
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+
+  --color-success: var(--success);
+  --color-on-success: var(--on-success);
+
+  --color-warning: var(--warning);
+  --color-on-warning: var(--on-warning);
+
+  --color-info: var(--info);
+  --color-on-info: var(--on-info);
+
+  --transition-motion: var(--motion);
+}

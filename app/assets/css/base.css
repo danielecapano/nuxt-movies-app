@@ -1,0 +1,132 @@
+:root {
+  color-scheme: light dark;
+
+  /* ---------- Primary ---------- */
+
+  --primary: light-dark(#9e7800, #ffc400);
+
+  --on-primary: light-dark(#ffffff, #000000);
+
+  --primary-container: light-dark(#fffaed, #5a4600);
+
+  --on-primary-container: light-dark(#634a00, #ffe3a3);
+
+  /* ---------- Background ---------- */
+
+  --background: light-dark(#ffffff, #121212);
+
+  --on-background: light-dark(#000000, #ffffff);
+
+  /* ---------- Surface ---------- */
+
+  --surface: light-dark(#f2f2f2, #252525);
+
+  --on-surface: light-dark(#000000, #ffffff);
+
+  --surface-variant: light-dark(#e4e4e4, #393939);
+
+  --on-surface-variant: light-dark(#000000, #ffffff);
+
+  /* ---------- Surface Containers ---------- */
+
+  --surface-container-lowest: light-dark(#ffffff, #121212);
+
+  --surface-container-low: light-dark(#f2f2f2, #252525);
+
+  --surface-container: light-dark(#e4e4e4, #393939);
+
+  --surface-container-high: light-dark(#d7d7d7, #4f4f4f);
+
+  --surface-container-highest: light-dark(#cacaca, #666666);
+
+  /* ---------- Tonal Surfaces ---------- */
+
+  --surface-tonal: light-dark(#fffaed, #252118);
+
+  --surface-tonal-low: light-dark(#f2ede2, #37342b);
+
+  --surface-tonal-container: light-dark(#e4e0d6, #4b473f);
+
+  --surface-tonal-high: light-dark(#d7d4cb, #5f5c54);
+
+  --surface-tonal-highest: light-dark(#cac7c0, #74716b);
+
+  /* ---------- Outline ---------- */
+
+  --outline: light-dark(#d7d7d7, #4f4f4f);
+
+  --outline-variant: light-dark(#e4e4e4, #666666);
+
+  /* ---------- Error ---------- */
+
+  --error: light-dark(#ff312e, #ff312e);
+
+  --on-error: light-dark(#ffffff, #000000);
+
+  --error-container: light-dark(#ff8072, #ff6a5d);
+
+  --on-error-container: light-dark(#ffffff, #000000);
+
+  /* ---------- Success ---------- */
+
+  --success: light-dark(#13e83a, #13e83a);
+
+  --on-success: light-dark(#000000, #000000);
+
+  /* ---------- Warning ---------- */
+
+  --warning: light-dark(#f0b01a, #f0b01a);
+
+  --on-warning: light-dark(#000000, #000000);
+
+  /* ---------- Info ---------- */
+
+  --info: light-dark(#2daaf7, #2daaf7);
+
+  --on-info: light-dark(#000000, #000000);
+
+  /* ---------- Effects ---------- */
+
+  --shadow: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+
+  /* ---------- Layout ---------- */
+
+  --motion: 180ms;
+}
+
+/* =========================================================
+   THEME OVERRIDE
+   ========================================================= */
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html {
+  font-family: Inter, system-ui, sans-serif;
+  color-scheme: light dark;
+}
+html,
+body,
+#__nuxt {
+  min-height: 100%;
+}
+#__nuxt {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+  min-height: 100vh;
+}

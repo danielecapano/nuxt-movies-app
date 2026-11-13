@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 
@@ -22,7 +21,8 @@ function toggleTheme() {
 </script>
 
 <template>
-  <button type="button" @click="toggleTheme" class="bg-primary-container text-on-primary-container hover:bg-surface-container transition-theme px-4 py-2 rounded-lg cursor-pointer">
-    {{ theme === "dark" ? "Tema chiaro" : "Tema scuro" }}
+  <button type="button" @click="toggleTheme"
+    class=" flex-center bg-primary-container text-on-primary-container hover:bg-surface-container transition-theme size-10 rounded-full cursor-pointer">
+    <AppIcon :name="theme === 'dark' ? 'fa6-solid:sun' : 'fa6-solid:moon'" :size=24 />
   </button>
 </template>

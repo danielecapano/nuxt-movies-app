@@ -57,4 +57,7 @@
   --color-on-info: var(--on-info);
 
   --transition-motion: var(--motion);
+
+  --font-sans: 'Plus Jakarta Sans Variable', sans-serif;
+  --font-serif: 'Playfair Display Variable', serif;
 }

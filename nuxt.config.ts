@@ -1,15 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from '@tailwindcss/vite';
 export default defineNuxtConfig({
-  modules: [],
+  modules: ['@nuxt/image', '@nuxt/icon/module'],
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', 'swiper/css', 'swiper/css/effect-fade'],
 
   vite: {
-    plugins: [
-      tailwindcss()
-    ]
-  }
-})
+    plugins: [tailwindcss()],
+  },
+  runtimeConfig: {
+    tmdbAccessToken: '',
+  },
+  image: {
+    domains: ['image.tmdb.org'],
+  },
+});

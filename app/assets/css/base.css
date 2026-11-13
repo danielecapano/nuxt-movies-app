@@ -1,97 +1,97 @@
 :root {
-  color-scheme: light dark;
+	color-scheme: light dark;
 
-  /* ---------- Primary ---------- */
+	/* ---------- Primary ---------- */
 
-  --primary: light-dark(#9e7800, #ffc400);
+	--primary: light-dark(#9e7800, oklch(85% 0.17 86));
 
-  --on-primary: light-dark(#ffffff, #000000);
+	--on-primary: light-dark(#ffffff, #000000);
 
-  --primary-container: light-dark(#fffaed, #5a4600);
+	--primary-container: light-dark(#fffaed, #5a4600);
 
-  --on-primary-container: light-dark(#634a00, #ffe3a3);
+	--on-primary-container: light-dark(#634a00, #ffe3a3);
 
-  /* ---------- Background ---------- */
+	/* ---------- Background ---------- */
 
-  --background: light-dark(#ffffff, #121212);
+	--background: light-dark(#ffffff, #121212);
 
-  --on-background: light-dark(#000000, #ffffff);
+	--on-background: light-dark(#000000, #ffffff);
 
-  /* ---------- Surface ---------- */
+	/* ---------- Surface ---------- */
 
-  --surface: light-dark(#f2f2f2, #252525);
+	--surface: light-dark(#f2f2f2, #252525);
 
-  --on-surface: light-dark(#000000, #ffffff);
+	--on-surface: light-dark(#000000, #ffffff);
 
-  --surface-variant: light-dark(#e4e4e4, #393939);
+	--surface-variant: light-dark(#e4e4e4, #393939);
 
-  --on-surface-variant: light-dark(#000000, #ffffff);
+	--on-surface-variant: light-dark(#000000, #ffffff);
 
-  /* ---------- Surface Containers ---------- */
+	/* ---------- Surface Containers ---------- */
 
-  --surface-container-lowest: light-dark(#ffffff, #121212);
+	--surface-container-lowest: light-dark(#ffffff, #121212);
 
-  --surface-container-low: light-dark(#f2f2f2, #252525);
+	--surface-container-low: light-dark(#f2f2f2, oklch(21% 0 271));
 
-  --surface-container: light-dark(#e4e4e4, #393939);
+	--surface-container: light-dark(#e4e4e4, #202020);
 
-  --surface-container-high: light-dark(#d7d7d7, #4f4f4f);
+	--surface-container-high: light-dark(#d7d7d7, #4f4f4f);
 
-  --surface-container-highest: light-dark(#cacaca, #666666);
+	--surface-container-highest: light-dark(#cacaca, oklch(75% 0 272));
 
-  /* ---------- Tonal Surfaces ---------- */
+	/* ---------- Tonal Surfaces ---------- */
 
-  --surface-tonal: light-dark(#fffaed, #252118);
+	--surface-tonal: light-dark(#fffaed, #252118);
 
-  --surface-tonal-low: light-dark(#f2ede2, #37342b);
+	--surface-tonal-low: light-dark(#f2ede2, #37342b);
 
-  --surface-tonal-container: light-dark(#e4e0d6, #4b473f);
+	--surface-tonal-container: light-dark(#e4e0d6, #4b473f);
 
-  --surface-tonal-high: light-dark(#d7d4cb, #5f5c54);
+	--surface-tonal-high: light-dark(#d7d4cb, #5f5c54);
 
-  --surface-tonal-highest: light-dark(#cac7c0, #74716b);
+	--surface-tonal-highest: light-dark(#cac7c0, #74716b);
 
-  /* ---------- Outline ---------- */
+	/* ---------- Outline ---------- */
 
-  --outline: light-dark(#d7d7d7, #4f4f4f);
+	--outline: light-dark(#d7d7d7, oklch(40% 0 272));
 
-  --outline-variant: light-dark(#e4e4e4, #666666);
+	--outline-variant: light-dark(#e4e4e4, oklch(70% 0 272));
 
-  /* ---------- Error ---------- */
+	/* ---------- Error ---------- */
 
-  --error: light-dark(#ff312e, #ff312e);
+	--error: light-dark(#ff312e, #ff312e);
 
-  --on-error: light-dark(#ffffff, #000000);
+	--on-error: light-dark(#ffffff, #000000);
 
-  --error-container: light-dark(#ff8072, #ff6a5d);
+	--error-container: light-dark(#ff8072, #ff6a5d);
 
-  --on-error-container: light-dark(#ffffff, #000000);
+	--on-error-container: light-dark(#ffffff, #000000);
 
-  /* ---------- Success ---------- */
+	/* ---------- Success ---------- */
 
-  --success: light-dark(#13e83a, #13e83a);
+	--success: light-dark(#13e83a, #13e83a);
 
-  --on-success: light-dark(#000000, #000000);
+	--on-success: light-dark(#000000, #000000);
 
-  /* ---------- Warning ---------- */
+	/* ---------- Warning ---------- */
 
-  --warning: light-dark(#f0b01a, #f0b01a);
+	--warning: light-dark(#f0b01a, #f0b01a);
 
-  --on-warning: light-dark(#000000, #000000);
+	--on-warning: light-dark(#000000, #000000);
 
-  /* ---------- Info ---------- */
+	/* ---------- Info ---------- */
 
-  --info: light-dark(#2daaf7, #2daaf7);
+	--info: light-dark(#2daaf7, #2daaf7);
 
-  --on-info: light-dark(#000000, #000000);
+	--on-info: light-dark(#000000, #000000);
 
-  /* ---------- Effects ---------- */
+	/* ---------- Effects ---------- */
 
-  --shadow: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+	--shadow: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
 
-  /* ---------- Layout ---------- */
+	/* ---------- Layout ---------- */
 
-  --motion: 180ms;
+	--motion: 180ms;
 }
 
 /* =========================================================
@@ -99,34 +99,52 @@
    ========================================================= */
 
 :root[data-theme='light'] {
-  color-scheme: light;
+	color-scheme: light;
 }
 
 :root[data-theme='dark'] {
-  color-scheme: dark;
+	color-scheme: dark;
 }
 
 /* =========================================================
    GLOBAL
    ========================================================= */
+/* Firefox */
+* {
+	scrollbar-width: none;
+}
 
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+	display: none;
+}
 html {
-  font-family: Inter, system-ui, sans-serif;
-  color-scheme: light dark;
+	font-family: 'Plus Jakarta Sans Varible', sans-serif;
+	color-scheme: light dark;
 }
 html,
 body,
 #__nuxt {
-  min-height: 100%;
+	min-height: 100%;
 }
 #__nuxt {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+	min-height: 100vh;
+	width: min(100%, 1400px);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--on-background);
-  min-height: 100vh;
+	background-color: var(--background);
+	color: var(--on-background);
+	min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+	font-family: inherit;
+	outline: none;
 }

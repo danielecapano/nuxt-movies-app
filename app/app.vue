@@ -22,6 +22,11 @@ useHead({
     },
   ],
 })
+import '@fontsource-variable/plus-jakarta-sans'
+import '@fontsource-variable/plus-jakarta-sans/wght-italic.css'
+
+import '@fontsource-variable/playfair-display'
+import '@fontsource-variable/playfair-display/wght-italic.css'
 </script>
 
 <template>

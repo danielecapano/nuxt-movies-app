@@ -1,0 +1,1 @@
+export const counter = useState(() => 0 )

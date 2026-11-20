@@ -1,63 +1,79 @@
 @theme inline {
-  /* ---------- Primary ---------- */
+	/* Blu-ink */
+	--color-blu-ink-50: oklch(42% 0.02 248.8);
+	--color-blu-ink-100: oklch(40.9% 0.02 248.8);
+	--color-blu-ink-200: oklch(39.28% 0.02 248.8);
+	--color-blu-ink-300: oklch(37.4% 0.02 248.8);
+	--color-blu-ink-400: oklch(35.32% 0.02 248.8);
+	--color-blu-ink-500: oklch(33.07% 0.02 248.8);
+	--color-blu-ink-600: oklch(30.68% 0.02 248.8);
+	--color-blu-ink-700: oklch(28.16% 0.02 248.8);
+	--color-blu-ink-800: oklch(25.54% 0.02 248.8);
+	--color-blu-ink-900: oklch(22.82% 0.02 248.8);
+	--color-blu-ink-950: oklch(20% 0.02 248.8);
 
-  --color-primary: var(--primary);
-  --color-on-primary: var(--on-primary);
+	/* Gold */
+	--color-gold-50: oklch(97% 0.034 80.5);
+	--color-gold-100: oklch(93.44% 0.076 80.5);
+	--color-gold-200: oklch(88.24% 0.112 80.5);
+	--color-gold-300: oklch(82.16% 0.112 80.5);
+	--color-gold-400: oklch(75.43% 0.112 80.5);
+	--color-gold-500: oklch(68.16% 0.112 80.5);
+	--color-gold-600: oklch(60.45% 0.112 80.5);
+	--color-gold-700: oklch(52.34% 0.112 80.5);
+	--color-gold-800: oklch(43.88% 0.104 80.5);
+	--color-gold-900: oklch(35.09% 0.084 80.5);
+	--color-gold-950: oklch(26% 0.062 80.5);
 
-  --color-primary-container: var(--primary-container);
-  --color-on-primary-container: var(--on-primary-container);
+	/* Ivory */
+	--color-ivory-50: oklch(97% 0.02 84.6);
+	--color-ivory-100: oklch(93.44% 0.02 84.6);
+	--color-ivory-200: oklch(88.24% 0.02 84.6);
+	--color-ivory-300: oklch(82.16% 0.02 84.6);
+	--color-ivory-400: oklch(75.43% 0.02 84.6);
+	--color-ivory-500: oklch(68.16% 0.02 84.6);
+	--color-ivory-600: oklch(60.45% 0.02 84.6);
+	--color-ivory-700: oklch(52.34% 0.02 84.6);
+	--color-ivory-800: oklch(43.88% 0.02 84.6);
+	--color-ivory-900: oklch(35.09% 0.02 84.6);
+	--color-ivory-950: oklch(26% 0.02 84.6);
 
-  /* ---------- Background ---------- */
+	/* Stone-gray */
+	--color-stone-gray-50: oklch(97% 0.007 153.7);
+	--color-stone-gray-100: oklch(93.44% 0.007 153.7);
+	--color-stone-gray-200: oklch(88.24% 0.007 153.7);
+	--color-stone-gray-300: oklch(82.16% 0.007 153.7);
+	--color-stone-gray-400: oklch(75.43% 0.007 153.7);
+	--color-stone-gray-500: oklch(68.16% 0.007 153.7);
+	--color-stone-gray-600: oklch(60.45% 0.007 153.7);
+	--color-stone-gray-700: oklch(52.34% 0.007 153.7);
+	--color-stone-gray-800: oklch(43.88% 0.007 153.7);
+	--color-stone-gray-900: oklch(35.09% 0.007 153.7);
+	--color-stone-gray-950: oklch(26% 0.007 153.7);
 
-  --color-background: var(--background);
-  --color-on-background: var(--on-background);
+	--color-bg-deep: var(--color-blu-ink-950);
+	--color-bg-canvas: var(--color-blu-ink-900);
+	--color-bg-surface: var(--color-blu-ink-800);
+	--color-bg-surface-elevated: var(--color-blu-ink-700);
+	--color-bg-overlay: oklch(from var(--bg-deep) l c h / 0.88);
 
-  /* ---------- Surface ---------- */
+	--color-accent-gold: var(--color-gold-400);
+	--color-accent-gold-bright: var(--color-gold-300);
+	--color-accent-gold-subtle: oklch(from var(--accent-gold) l c h / 0.16);
+	--color-accent-gold-border: oklch(from var(--accent-gold) l c h / 0.45);
 
-  --color-surface: var(--surface);
-  --color-on-surface: var(--on-surface);
+	--color-text-primary: var(--color-ivory-50);
+	--color-text-secondary: var(--color-ivory-300);
+	--color-text-muted: var(--color-stone-gray-400);
+	--color-text-gold: var(--color-gold-300);
 
-  --color-surface-variant: var(--surface-variant);
-  --color-on-surface-variant: var(--on-surface-variant);
+	--color-border-hairline: oklch(from var(--color-ivory-200) l c h / 0.08);
+	--color-border-subtle: oklch(from var(--color-ivory-200) l c h / 0.15);
+	--color-border-focus: var(--accent-gold);
 
-  --color-surface-container-lowest: var(--surface-container-lowest);
-  --color-surface-container-low: var(--surface-container-low);
-  --color-surface-container: var(--surface-container);
-  --color-surface-container-high: var(--surface-container-high);
-  --color-surface-container-highest: var(--surface-container-highest);
+	--transition-motion: var(--motion);
 
-  /* ---------- Tonal Surfaces ---------- */
-
-  --color-surface-tonal: var(--surface-tonal);
-  --color-surface-tonal-low: var(--surface-tonal-low);
-  --color-surface-tonal-container: var(--surface-tonal-container);
-  --color-surface-tonal-high: var(--surface-tonal-high);
-  --color-surface-tonal-highest: var(--surface-tonal-highest);
-
-  /* ---------- Outline ---------- */
-
-  --color-outline: var(--outline);
-  --color-outline-variant: var(--outline-variant);
-
-  /* ---------- Status ---------- */
-
-  --color-error: var(--error);
-  --color-on-error: var(--on-error);
-
-  --color-error-container: var(--error-container);
-  --color-on-error-container: var(--on-error-container);
-
-  --color-success: var(--success);
-  --color-on-success: var(--on-success);
-
-  --color-warning: var(--warning);
-  --color-on-warning: var(--on-warning);
-
-  --color-info: var(--info);
-  --color-on-info: var(--on-info);
-
-  --transition-motion: var(--motion);
-
-  --font-sans: 'Plus Jakarta Sans Variable', sans-serif;
-  --font-serif: 'Playfair Display Variable', serif;
+	--font-sans: 'Plus Jakarta Sans Variable', sans-serif;
+	/* --font-serif: 'Bodoni Moda Variable', serif; */
+	--font-mono: 'JetBrains Mono Variable', monospace;
 }

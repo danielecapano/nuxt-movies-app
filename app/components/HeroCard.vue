@@ -8,33 +8,39 @@
 
 <template>
 	<div class="hero">
-		<figure class="hero-figure">
+		<figure class="hero-figure border-b border-border-hairline">
 			<img :src="movie.poster" class="hero-img" />
 		</figure>
 		<div class="hero-content">
 			<h3
-				class="hero-title font-serif italic text-6xl text-primary text-shadow-xs mb-1"
+				class="hero-title font-bodoni italic text-6xl text-gold-400 text-shadow-xs mb-1"
 			>
 				{{ movie.title }}
 			</h3>
-			<div class="flex items-center gap-4 mb-1">
-				<Rating :average="movie?.average" />
-				<span class="text-surface-container-highest font-medium">{{
-					yearByDate(movie.releaseDate)
+			<div class="flex items-center gap-2 mb-2">
+				<div class="tech-tag big gold">
+					<Rating :average="movie?.average" :font-size="12" />
+				</div>
+				<span class="tech-tag big">{{ yearByDate(movie.releaseDate) }}</span>
+			</div>
+			<div class="flex gap-2 mb-2">
+				<span v-for="genre in movie.genres" class="tech-tag big">{{
+					genre
 				}}</span>
 			</div>
-			<p class="hero-description w-1/2 text-sm mb-4">
+			<p class="hero-description w-1/2 text-sm text-text-secondary mb-4">
 				{{ movie.description }}
 			</p>
 			<div class="flex items-center gap-2 text-sm">
-				<button
-					class="flex items-center gap-2 bg-primary text-on-primary font-sans font-bold px-4 py-2 rounded-lg"
+				<NuxtLink
+					:to="`/movie/${movie.id}`"
+					class="flex items-center gap-2 text-accent-gold bg-accent-gold-subtle border border-accent-gold-border font-mono font-medium text-xs uppercase px-5 py-3 hover:bg-gold-400 hover:text-blu-ink-950 transition-colors duration-200"
 				>
 					<AppIcon name="fa6-solid:film" />
 					Vai alla scheda
-				</button>
+				</NuxtLink>
 				<button
-					class="flex items-center gap-2 bg-transparent font-sans font-bold border px-4 py-2 rounded-lg"
+					class="flex items-center gap-2 bg-transparent border border-border-hairline font-mono font-medium text-xs uppercase px-5 py-3 cursor-pointer hover:border-border-subtle hover:bg-bg-surface transition-colors duration-200"
 				>
 					<AppIcon name="fa6-solid:plus" />
 					La mia lista
@@ -49,15 +55,13 @@
 		position: relative;
 		display: grid;
 		width: 100%;
-		margin-bottom: 1rem;
 		.hero-figure {
 			position: relative;
 			aspect-ratio: 21 / 9;
-			border-radius: 1rem;
 			overflow: hidden;
 			grid-row: 1;
 			grid-column: 1;
-			background: var(--color-surface-container-low);
+			background: var(--color-blu-ink-950);
 		}
 
 		.hero-img {
@@ -66,7 +70,7 @@
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
-			mask-image: linear-gradient(to right, transparent 20%, black 100%);
+			mask-image: linear-gradient(to right, transparent 40%, black 100%);
 		}
 		.hero-content {
 			align-self: end;
@@ -82,6 +86,7 @@
 				text-overflow: ellipsis;
 				line-height: 1.3;
 			}
+
 			.hero-description {
 				display: -webkit-box;
 				-webkit-box-orient: vertical;

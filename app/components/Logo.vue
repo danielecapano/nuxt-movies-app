@@ -1,10 +1,7 @@
-<script setup lang="ts">
-
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-<svg width="100%" viewBox="0 0 1586 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!-- <svg width="100%" viewBox="0 0 1586 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g id="logo">
         <g>
             <path d="M291.667,262.5c0,16.098 -13.069,29.167 -29.167,29.167l-233.333,0c-16.098,0 -29.167,-13.069 -29.167,-29.167l0,-233.333c0,-16.098 13.069,-29.167 29.167,-29.167l233.333,0c16.098,0 29.167,13.069 29.167,29.167l0,233.333Z" style="fill:#ffc400;"/>
@@ -38,9 +35,10 @@
             </g>
         </g>
     </g>
-</svg>
-
+</svg> -->
+	<h2 class="font-bodoni text-5xl font-extrabold text-gold-400">
+		<span class="italic font-normal text-ivory-200">my</span>Movie
+	</h2>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

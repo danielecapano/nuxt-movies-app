@@ -9,12 +9,14 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "@fontsource-variable/playfair-display": "^5.3.0",
+    "@fontsource-variable/bodoni-moda": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
     "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
     "@lucide/vue": "^1.70.0",
     "@nuxt/icon": "^2.6.2",
     "@nuxt/image": "^2.2.1",
     "@tailwindcss/vite": "^4.3.3",
+    "@vueuse/core": "^15.0.0",
     "better-sqlite3": "^13.0.3",
     "nuxt": "^4.6.3",
     "swiper": "^14.4.0",
@@ -23,6 +25,7 @@
     "vue-router": "^5.3.1"
   },
   "devDependencies": {
-    "@iconify-json/fa6-solid": "^1.2.4"
+    "@iconify-json/fa6-solid": "^1.2.4",
+    "@vueuse/nuxt": "^15.0.0"
   }
 }

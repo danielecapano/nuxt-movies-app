@@ -5,61 +5,115 @@
 	const topRated = movies.value?.topRated;
 	const nowPlaying = movies.value?.nowPlaying;
 	const upcoming = movies.value?.upcoming;
+
+	const section = useTemplateRef('section');
+
+	const { width } = useElementSize(section);
+
+	const gap = 16;
+	const posterWidth = computed(() => (width.value - gap * 4) / 5);
 </script>
 
 <template>
 	<div class="block overflow-auto">
 		<Hero :trending="trending" v-if="trending" />
-		<div class="bg-surface-container-low rounded-2xl py-4">
-			<section class="mb-8">
-				<h3 class="text-xl font-black mb-4 pl-12">Popolari</h3>
-				<div class="grid-container">
-					<div class="grid">
-						<HomeCard
-							v-for="(movie, index) in popular"
-							:movie="movie"
-							:index="index"
-						/>
-					</div>
+
+		<section>
+			<div
+				class="flex items-center justify-between border-b border-border-hairline mx-12 pb-4 mb-9"
+			>
+				<h3 class="text-[2rem] font-bodoni font-bold">Popolari</h3>
+				<!-- <p>Poster width: {{ posterWidth }}</p> -->
+				<NuxtLink
+					to="/populars"
+					class="flex items-center gap-2 font-mono text-xs text-text-secondary tracking-wider hover:text-accent-gold transition-colors cursor-pointer"
+				>
+					<p>Vedi tutti</p>
+					<AppIcon name="iconamoon:arrow-right-1-light" />
+				</NuxtLink>
+			</div>
+
+			<div class="movies-showcase" ref="section">
+				<HomeCard
+					v-for="(movie, index) in popular"
+					:movie="movie"
+					:index="index"
+					:posterWidth="posterWidth"
+				/>
+			</div>
+		</section>
+		<section>
+			<div
+				class="flex items-center justify-between border-b border-border-hairline mx-12 pb-4 mb-9"
+			>
+				<h3 class="text-[2rem] font-bodoni font-bold">I più votati</h3>
+				<NuxtLink
+					to="/topRated"
+					class="flex items-center gap-2 font-mono text-xs text-text-secondary tracking-wider hover:text-accent-gold transition-colors cursor-pointer"
+				>
+					<p>Vedi tutti</p>
+					<AppIcon name="iconamoon:arrow-right-1-light" />
+				</NuxtLink>
+			</div>
+			<div class="grid-container">
+				<div class="movies-showcase">
+					<HomeCard
+						v-for="(movie, index) in topRated"
+						:movie="movie"
+						:index="index"
+						:posterWidth="posterWidth"
+					/>
 				</div>
-			</section>
-			<section class="mb-8">
-				<h3 class="text-xl font-black mb-4 pl-12">I più votati</h3>
-				<div class="grid-container">
-					<div class="grid">
-						<HomeCard
-							v-for="(movie, index) in topRated"
-							:movie="movie"
-							:index="index"
-						/>
-					</div>
+			</div>
+		</section>
+		<section>
+			<div
+				class="flex items-center justify-between border-b border-border-hairline mx-12 pb-4 mb-9"
+			>
+				<h3 class="text-[2rem] font-bodoni font-bold">Ora al cinema</h3>
+				<NuxtLink
+					to="/nowPlaying"
+					class="flex items-center gap-2 font-mono text-xs text-text-secondary tracking-wider hover:text-accent-gold transition-colors cursor-pointer"
+				>
+					<p>Vedi tutti</p>
+					<AppIcon name="iconamoon:arrow-right-1-light" />
+				</NuxtLink>
+			</div>
+			<div class="grid-container">
+				<div class="movies-showcase">
+					<HomeCard
+						v-for="(movie, index) in nowPlaying"
+						:movie="movie"
+						:index="index"
+						:posterWidth="posterWidth"
+					/>
 				</div>
-			</section>
-			<section class="mb-8">
-				<h3 class="text-xl font-black mb-4 pl-12">Al cinema</h3>
-				<div class="grid-container">
-					<div class="grid">
-						<HomeCard
-							v-for="(movie, index) in nowPlaying"
-							:movie="movie"
-							:index="index"
-						/>
-					</div>
+			</div>
+		</section>
+		<section>
+			<div
+				class="flex items-center justify-between border-b border-border-hairline mx-12 pb-4 mb-9"
+			>
+				<h3 class="text-[2rem] font-bodoni font-bold">Prossimamente</h3>
+				<NuxtLink
+					to="/upcoming"
+					class="flex items-center gap-2 font-mono text-xs text-text-secondary tracking-wider hover:text-accent-gold transition-colors cursor-pointer"
+				>
+					<p>Vedi tutti</p>
+					<AppIcon name="iconamoon:arrow-right-1-light" />
+				</NuxtLink>
+			</div>
+			<div class="grid-container">
+				<div class="movies-showcase">
+					<HomeCard
+						v-for="(movie, index) in upcoming"
+						:movie="movie"
+						:index="index"
+						:posterWidth="posterWidth"
+					/>
 				</div>
-			</section>
-			<section class="mb-8">
-				<h3 class="text-xl font-black mb-4 pl-12">Prossimamente</h3>
-				<div class="grid-container">
-					<div class="grid">
-						<HomeCard
-							v-for="(movie, index) in upcoming"
-							:movie="movie"
-							:index="index"
-						/>
-					</div>
-				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 	</div>
 </template>
 
@@ -68,28 +122,27 @@
 		position: relative;
 		display: grid;
 		width: 100%;
-		margin-bottom: 1rem;
 	}
 
-	.grid-container {
-		width: 100%;
-		overflow-x: auto;
-		padding-inline: 3rem;
-		mask-image: linear-gradient(
-			to right,
-			transparent 2rem,
-			black 3rem,
-			black calc(100% - 3rem),
-			transparent calc(100% - 2rem)
-		);
+	section {
+		padding: 3.5rem 3rem;
+		&:nth-child(odd) {
+			background-color: var(--bg-surface);
+		}
 	}
 
-	.grid {
+	.movies-showcase {
 		--gap: 1rem;
-		display: grid;
-
+		--cols: 5;
+		display: flex;
 		gap: var(--gap);
-		width: calc(200% + var(--gap));
-		grid-template-columns: repeat(10, 1fr);
+		container-type: inline-size;
+		--card-w: calc((100cqw - (var(--cols) - 1) * var(--gap)) / var(--cols));
+		&:has(.movie-card:hover) {
+			.movie-card:not(:hover) {
+				opacity: 0.8;
+				filter: grayscale(0.5);
+			}
+		}
 	}
 </style>

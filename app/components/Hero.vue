@@ -28,6 +28,7 @@
 		position: relative;
 		display: grid;
 		width: 100%;
-		margin-bottom: 1rem;
+		/* margin-bottom: 1rem; */
+		/* border-bottom: 1px solid var(--border-hairline); */
 	}
 </style>

@@ -19,13 +19,15 @@
 </script>
 
 <template>
-	<header class="p-4 bg-surface-container-low rounded-2xl mt-4 mr-4">
+	<header class="p-4 border-b border-border-hairline">
 		<div class="container flex items-center justify-between">
 			<form
 				@submit.prevent="handleSearch"
-				class="bg-surface w-1/2 relative rounded-lg text-surface-container-highest"
+				class="bg-surface w-1/2 relative text-text-primary"
 			>
-				<div class="absolute size-4 left-3 top-1/2 -translate-y-1/2">
+				<div
+					class="absolute size-4 left-3 top-1/2 -translate-y-1/2 text-text-muted"
+				>
 					<AppIcon name="fa6-solid:magnifying-glass" />
 				</div>
 				<input
@@ -36,18 +38,17 @@
 					autocomplete="off"
 					lang="it"
 					spellcheck="false"
-					class="w-full py-2 pl-9 rounded-lg focus:ring-1 focus:ring-outline"
+					class="w-full py-2 pl-9 border border-border-hairline bg-bg-surface focus:border-accent-gold-border transition-colors duration-150"
 				/>
 				<button
 					type="button"
-					class="absolute size-4 right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+					class="absolute size-4 right-3 top-1/2 -translate-y-1/2 cursor-pointer text-text-muted"
 					v-if="search"
 					@click="resetSearch"
 				>
 					<AppIcon name="fa6-solid:xmark" />
 				</button>
 			</form>
-			<Theme />
 		</div>
 	</header>
 </template>

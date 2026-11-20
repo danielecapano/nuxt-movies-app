@@ -1,8 +1,8 @@
 <script setup lang="ts">
-useHead({
-  script: [
-    {
-      innerHTML: `
+	useHead({
+		script: [
+			{
+				innerHTML: `
         (() => {
           try {
             const saved = localStorage.getItem('theme');
@@ -18,19 +18,22 @@ useHead({
           }
         })();
       `,
-      tagPosition: 'head',
-    },
-  ],
-})
-import '@fontsource-variable/plus-jakarta-sans'
-import '@fontsource-variable/plus-jakarta-sans/wght-italic.css'
+				tagPosition: 'head',
+			},
+		],
+	});
+	import '@fontsource-variable/plus-jakarta-sans';
+	import '@fontsource-variable/plus-jakarta-sans/wght-italic.css';
 
-import '@fontsource-variable/playfair-display'
-import '@fontsource-variable/playfair-display/wght-italic.css'
+	import '@fontsource-variable/bodoni-moda';
+	import '@fontsource-variable/bodoni-moda/opsz-italic.css';
+	import '@fontsource-variable/bodoni-moda/opsz.css';
+	import '@fontsource-variable/bodoni-moda/wght-italic.css';
+	import '@fontsource-variable/jetbrains-mono';
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+	<NuxtLayout>
+		<NuxtPage />
+	</NuxtLayout>
 </template>

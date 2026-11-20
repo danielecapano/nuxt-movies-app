@@ -1,89 +1,76 @@
 :root {
-	color-scheme: light dark;
+	/* Blu-ink */
+	--color-blu-ink-50: oklch(42% 0.02 248.8);
+	--color-blu-ink-100: oklch(40.9% 0.02 248.8);
+	--color-blu-ink-200: oklch(39.28% 0.02 248.8);
+	--color-blu-ink-300: oklch(37.4% 0.02 248.8);
+	--color-blu-ink-400: oklch(35.32% 0.02 248.8);
+	--color-blu-ink-500: oklch(33.07% 0.02 248.8);
+	--color-blu-ink-600: oklch(30.68% 0.02 248.8);
+	--color-blu-ink-700: oklch(28.16% 0.02 248.8);
+	--color-blu-ink-800: oklch(25.54% 0.02 248.8);
+	--color-blu-ink-900: oklch(22.82% 0.02 248.8);
+	--color-blu-ink-950: oklch(20% 0.02 248.8);
 
-	/* ---------- Primary ---------- */
+	/* Gold */
+	--color-gold-50: oklch(97% 0.034 80.5);
+	--color-gold-100: oklch(93.44% 0.076 80.5);
+	--color-gold-200: oklch(88.24% 0.112 80.5);
+	--color-gold-300: oklch(82.16% 0.112 80.5);
+	--color-gold-400: oklch(75.43% 0.112 80.5);
+	--color-gold-500: oklch(68.16% 0.112 80.5);
+	--color-gold-600: oklch(60.45% 0.112 80.5);
+	--color-gold-700: oklch(52.34% 0.112 80.5);
+	--color-gold-800: oklch(43.88% 0.104 80.5);
+	--color-gold-900: oklch(35.09% 0.084 80.5);
+	--color-gold-950: oklch(26% 0.062 80.5);
 
-	--primary: light-dark(#9e7800, oklch(85% 0.17 86));
+	/* Ivory */
+	--color-ivory-50: oklch(97% 0.02 84.6);
+	--color-ivory-100: oklch(93.44% 0.02 84.6);
+	--color-ivory-200: oklch(88.24% 0.02 84.6);
+	--color-ivory-300: oklch(82.16% 0.02 84.6);
+	--color-ivory-400: oklch(75.43% 0.02 84.6);
+	--color-ivory-500: oklch(68.16% 0.02 84.6);
+	--color-ivory-600: oklch(60.45% 0.02 84.6);
+	--color-ivory-700: oklch(52.34% 0.02 84.6);
+	--color-ivory-800: oklch(43.88% 0.02 84.6);
+	--color-ivory-900: oklch(35.09% 0.02 84.6);
+	--color-ivory-950: oklch(26% 0.02 84.6);
 
-	--on-primary: light-dark(#ffffff, #000000);
+	/* Stone-gray */
+	--color-stone-gray-50: oklch(97% 0.007 153.7);
+	--color-stone-gray-100: oklch(93.44% 0.007 153.7);
+	--color-stone-gray-200: oklch(88.24% 0.007 153.7);
+	--color-stone-gray-300: oklch(82.16% 0.007 153.7);
+	--color-stone-gray-400: oklch(75.43% 0.007 153.7);
+	--color-stone-gray-500: oklch(68.16% 0.007 153.7);
+	--color-stone-gray-600: oklch(60.45% 0.007 153.7);
+	--color-stone-gray-700: oklch(52.34% 0.007 153.7);
+	--color-stone-gray-800: oklch(43.88% 0.007 153.7);
+	--color-stone-gray-900: oklch(35.09% 0.007 153.7);
+	--color-stone-gray-950: oklch(26% 0.007 153.7);
 
-	--primary-container: light-dark(#fffaed, #5a4600);
+	/* Mappatura Semantica dell'Identità myMovie */
+	--bg-deep: var(--color-blu-ink-950);
+	--bg-canvas: var(--color-blu-ink-900);
+	--bg-surface: var(--color-blu-ink-800);
+	--bg-surface-elevated: var(--color-blu-ink-700);
+	--bg-overlay: oklch(from var(--bg-deep) l c h / 0.88);
 
-	--on-primary-container: light-dark(#634a00, #ffe3a3);
+	--accent-gold: var(--color-gold-400);
+	--accent-gold-bright: var(--color-gold-300);
+	--accent-gold-subtle: oklch(from var(--accent-gold) l c h / 0.16);
+	--accent-gold-border: oklch(from var(--accent-gold) l c h / 0.45);
 
-	/* ---------- Background ---------- */
+	--text-primary: var(--color-ivory-50);
+	--text-secondary: var(--color-ivory-300);
+	--text-muted: var(--color-stone-gray-400);
+	--text-gold: var(--color-gold-300);
 
-	--background: light-dark(#ffffff, #121212);
-
-	--on-background: light-dark(#000000, #ffffff);
-
-	/* ---------- Surface ---------- */
-
-	--surface: light-dark(#f2f2f2, #252525);
-
-	--on-surface: light-dark(#000000, #ffffff);
-
-	--surface-variant: light-dark(#e4e4e4, #393939);
-
-	--on-surface-variant: light-dark(#000000, #ffffff);
-
-	/* ---------- Surface Containers ---------- */
-
-	--surface-container-lowest: light-dark(#ffffff, #121212);
-
-	--surface-container-low: light-dark(#f2f2f2, oklch(21% 0 271));
-
-	--surface-container: light-dark(#e4e4e4, #202020);
-
-	--surface-container-high: light-dark(#d7d7d7, #4f4f4f);
-
-	--surface-container-highest: light-dark(#cacaca, oklch(75% 0 272));
-
-	/* ---------- Tonal Surfaces ---------- */
-
-	--surface-tonal: light-dark(#fffaed, #252118);
-
-	--surface-tonal-low: light-dark(#f2ede2, #37342b);
-
-	--surface-tonal-container: light-dark(#e4e0d6, #4b473f);
-
-	--surface-tonal-high: light-dark(#d7d4cb, #5f5c54);
-
-	--surface-tonal-highest: light-dark(#cac7c0, #74716b);
-
-	/* ---------- Outline ---------- */
-
-	--outline: light-dark(#d7d7d7, oklch(40% 0 272));
-
-	--outline-variant: light-dark(#e4e4e4, oklch(70% 0 272));
-
-	/* ---------- Error ---------- */
-
-	--error: light-dark(#ff312e, #ff312e);
-
-	--on-error: light-dark(#ffffff, #000000);
-
-	--error-container: light-dark(#ff8072, #ff6a5d);
-
-	--on-error-container: light-dark(#ffffff, #000000);
-
-	/* ---------- Success ---------- */
-
-	--success: light-dark(#13e83a, #13e83a);
-
-	--on-success: light-dark(#000000, #000000);
-
-	/* ---------- Warning ---------- */
-
-	--warning: light-dark(#f0b01a, #f0b01a);
-
-	--on-warning: light-dark(#000000, #000000);
-
-	/* ---------- Info ---------- */
-
-	--info: light-dark(#2daaf7, #2daaf7);
-
-	--on-info: light-dark(#000000, #000000);
+	--border-hairline: oklch(from var(--color-ivory-200) l c h / 0.08);
+	--border-subtle: oklch(from var(--color-ivory-200) l c h / 0.15);
+	--border-focus: var(--accent-gold);
 
 	/* ---------- Effects ---------- */
 
@@ -92,18 +79,6 @@
 	/* ---------- Layout ---------- */
 
 	--motion: 180ms;
-}
-
-/* =========================================================
-   THEME OVERRIDE
-   ========================================================= */
-
-:root[data-theme='light'] {
-	color-scheme: light;
-}
-
-:root[data-theme='dark'] {
-	color-scheme: dark;
 }
 
 /* =========================================================
@@ -128,20 +103,22 @@ body,
 	min-height: 100%;
 }
 #__nuxt {
-	min-height: 100vh;
-	width: min(100%, 1400px);
-	margin: 0 auto;
+	height: calc(100vh - 3rem);
+	width: min(calc(100% - 3rem), 1400px);
+	margin: 1.5rem auto;
 	display: flex;
 	flex-direction: column;
+	box-shadow:
+		0 20px 60px rgba(0, 0, 0, 0.65),
+		0 0 0 1px var(--border-hairline);
 }
 
 body {
-	background-color: var(--background);
-	color: var(--on-background);
-	min-height: 100vh;
+	background-color: var(--bg-deep);
+	color: var(--text-primary);
+	height: calc(100vh - 3rem);
 }
 
-button,
 input,
 textarea,
 select {

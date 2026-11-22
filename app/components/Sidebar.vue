@@ -6,47 +6,27 @@
 	>
 		<Logo />
 		<nav class="flex flex-col gap-4 mt-12 text-surface-tonal-highest">
-			<NuxtLink
-				to="/"
-				active-class="text-gold-400 bg-surface hover:text-primary  border-l-3 border-l"
-				class="px-4 py-2 font-medium hover:bg-surface hover:text-on-surface transition-colors duration-150 ease-in-out"
-			>
+			<NuxtLink to="/" active-class="active" class="nav-item">
 				<div class="flex items-center gap-3">
 					<span>Home</span>
 				</div>
 			</NuxtLink>
-			<NuxtLink
-				to="/populars"
-				active-class="text-gold-400 bg-surface hover:text-primary border-l"
-				class="px-4 py-3 font-medium hover:bg-surface hover:text-on-surface transition-colors duration-150 ease-in-out"
-			>
+			<NuxtLink to="/populars" active-class="active" class="nav-item">
 				<div class="flex items-center gap-3">
 					<span>Film popolari</span>
 				</div>
 			</NuxtLink>
-			<NuxtLink
-				to="/nowPlaying"
-				active-class="text-gold-400 bg-surface hover:text-primary"
-				class="px-4 py-3 font-medium rounded-lg hover:bg-surface hover:text-on-surface transition-colors duration-150 ease-in-out"
-			>
+			<NuxtLink to="/nowPlaying" active-class="active" class="nav-item">
 				<div class="flex items-center gap-3">
 					<span>Film al Cinema</span>
 				</div>
 			</NuxtLink>
-			<NuxtLink
-				to="/upcoming"
-				active-class="text-gold-400 bg-surface hover:text-primary"
-				class="px-4 py-3 font-medium rounded-lg hover:bg-surface hover:text-on-surface transition-colors duration-150 ease-in-out"
-			>
+			<NuxtLink to="/upcoming" active-class="active" class="nav-item">
 				<div class="flex items-center gap-3">
 					<span>Film in uscita</span>
 				</div>
 			</NuxtLink>
-			<NuxtLink
-				to="/topRated"
-				active-class="text-gold-400 bg-surface hover:text-primary"
-				class="px-4 py-3 font-medium rounded-lg hover:bg-surface hover:text-on-surface transition-colors duration-150 ease-in-out"
-			>
+			<NuxtLink to="/topRated" active-class="active" class="nav-item">
 				<div class="flex items-center gap-3">
 					<span>I più votati</span>
 				</div>
@@ -54,3 +34,39 @@
 		</nav>
 	</aside>
 </template>
+
+<style scoped>
+	.nav-item {
+		position: relative;
+		padding: 0.5rem 1rem;
+		font-family: 'JetBrains Mono Variable', monospace;
+		font-size: 0.875rem;
+		transition: background-color 180ms ease-in-out;
+		&.active {
+			background-color: var(--accent-gold-subtle);
+			color: var(--accent-gold);
+			&:before {
+				background-color: var(--accent-gold-border);
+				scale: 1;
+			}
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 3px;
+			height: 100%;
+			background-color: var(--text-primary);
+			scale: 1 0;
+			transform-origin: bottom;
+			transition: scale 180ms ease-in-out;
+		}
+		&:hover:not(.active) {
+			background-color: var(--bg-surface);
+			&::before {
+				scale: 1;
+			}
+		}
+	}
+</style>

@@ -1,27 +1,22 @@
-
-const config = useRuntimeConfig()
+const config = useRuntimeConfig();
 
 export async function tmdbFetch<T>(
-  endpoint: string,
-  params: {
-    page?: number
-    query?: string
-    region?: string
-  } = {}
+	endpoint: string,
+	params: {
+		page?: number;
+		query?: string;
+		region?: string;
+		append_to_response?: string;
+	} = {},
 ): Promise<T> {
-  return $fetch(`https://api.themoviedb.org/3${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${config.tmdbAccessToken}`,
-      accept: 'application/json'
-    },
-    query: {
-      language: 'it-IT',
-      ...params
-    }
-  })
+	return $fetch(`https://api.themoviedb.org/3${endpoint}`, {
+		headers: {
+			Authorization: `Bearer ${config.tmdbAccessToken}`,
+			accept: 'application/json',
+		},
+		query: {
+			language: 'it-IT',
+			...params,
+		},
+	});
 }
-
-
-
-
-

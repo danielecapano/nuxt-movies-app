@@ -1,3 +1,4 @@
+import { TMDBMovieDetail } from '../types/types';
 import { tmdbFetch } from './tmdb';
 
 export async function getPopularMovies(
@@ -67,6 +68,8 @@ export async function searchMovies(
 }
 
 export async function getDetailsMovie(id: number) {
-	const data = await tmdbFetch(`/movie/${id}`);
+	const data = await tmdbFetch<TMDBMovieDetail>(`/movie/${id}`, {
+		append_to_response: 'credits,videos',
+	});
 	return data;
 }

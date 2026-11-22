@@ -20,7 +20,7 @@
 
 		<section>
 			<div
-				class="flex items-center justify-between border-b border-border-hairline mx-12 pb-4 mb-9"
+				class="flex items-center justify-between border-b border-border-hairline pb-4 mb-9"
 			>
 				<h3 class="text-[2rem] font-bodoni font-bold">Popolari</h3>
 				<!-- <p>Poster width: {{ posterWidth }}</p> -->
@@ -44,7 +44,7 @@
 		</section>
 		<section>
 			<div
-				class="flex items-center justify-between border-b border-border-hairline mx-12 pb-4 mb-9"
+				class="flex items-center justify-between border-b border-border-hairline pb-4 mb-9"
 			>
 				<h3 class="text-[2rem] font-bodoni font-bold">I più votati</h3>
 				<NuxtLink
@@ -68,7 +68,7 @@
 		</section>
 		<section>
 			<div
-				class="flex items-center justify-between border-b border-border-hairline mx-12 pb-4 mb-9"
+				class="flex items-center justify-between border-b border-border-hairline pb-4 mb-9"
 			>
 				<h3 class="text-[2rem] font-bodoni font-bold">Ora al cinema</h3>
 				<NuxtLink
@@ -92,7 +92,7 @@
 		</section>
 		<section>
 			<div
-				class="flex items-center justify-between border-b border-border-hairline mx-12 pb-4 mb-9"
+				class="flex items-center justify-between border-b border-border-hairline pb-4 mb-9"
 			>
 				<h3 class="text-[2rem] font-bodoni font-bold">Prossimamente</h3>
 				<NuxtLink

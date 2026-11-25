@@ -7,7 +7,7 @@
 	<div class="p-6">
 		<img src="/banner.avif" alt="banner" class="banner" />
 		<div class="mb-24">
-			<h1 class="font-bodoni text-5xl font-bold mb-2">Film Popolari</h1>
+			<h1 class="font-newsreader text-5xl font-bold mb-2">Film Popolari</h1>
 			<p class="text-text-secondary text-sm">
 				I titoli più amati dal pubblico, sempre aggiornati.
 			</p>
@@ -25,7 +25,7 @@
 						format="avif"
 					/>
 					<h3
-						class="absolute bottom-2 left-2 font-bodoni font-medium text-lg/5 text-accent-gold-bright z-10"
+						class="absolute bottom-2 left-2 font-newsreader font-medium text-lg/5 text-accent-gold-bright z-10"
 					>
 						{{ movie.title }}
 					</h3>

@@ -52,6 +52,12 @@
 	font-variation-settings: 'opsz' 20;
 	letter-spacing: -0.01em;
 }
+@utility font-newsreader {
+	font-family: 'Newsreader Variable', serif;
+	font-optical-sizing: none;
+	font-variation-settings: auto;
+	letter-spacing: -0.01em;
+}
 
 @utility tech-tag {
 	display: inline-flex;

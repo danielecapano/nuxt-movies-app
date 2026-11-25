@@ -36,7 +36,7 @@ export type Movie = {
 	average: number;
 };
 
-export type TMDBMovieDetail = {
+export type TMDBMovieDetails = {
 	adult: boolean;
 	backdrop_path: string;
 	belongs_to_collection: BelongsToCollection;
@@ -68,7 +68,8 @@ export type TMDBMovieDetail = {
 	videos: Videos;
 };
 
-export type MovieDetail = {
+export type MovieDetails = {
+	id: number;
 	title: string;
 	originalTitle: string;
 	originalLanguage: string;
@@ -76,22 +77,29 @@ export type MovieDetail = {
 	description: string;
 	genres: string[];
 	date: string;
+	duration: number;
 	average: number;
 	budget: number;
 	revenue: number;
 	cover: string;
 	poster: string;
 	video: string;
-	director: string[];
+	director: (Director | undefined)[];
 	cast: Actor[];
 	productionCompanies: { id: number; name: string }[];
 	productionCountries: { iso: string; name: string }[];
 };
 
-type Actor = {
+export type Actor = {
 	id: number;
 	name: string;
 	character: string;
+	picture: string;
+};
+
+type Director = {
+	id: number;
+	name: string;
 	picture: string;
 };
 
@@ -140,7 +148,7 @@ export interface Cast {
 	popularity: number;
 	profile_path: null | string;
 	cast_id?: number;
-	character?: string;
+	character: string;
 	credit_id: string;
 	order?: number;
 	department?: Department;

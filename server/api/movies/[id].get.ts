@@ -1,3 +1,5 @@
+import { normalizeMovieDetails } from '~~/server/utils/normalize';
+
 export default defineEventHandler(async event => {
 	const rawId = getRouterParam(event, 'id');
 
@@ -17,5 +19,6 @@ export default defineEventHandler(async event => {
 		});
 	}
 
-	return getDetailsMovie(id);
+	const movie = await getDetailsMovie(id);
+	return normalizeMovieDetails(movie);
 });

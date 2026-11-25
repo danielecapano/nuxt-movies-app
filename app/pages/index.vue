@@ -22,7 +22,7 @@
 			<div
 				class="flex items-center justify-between border-b border-border-hairline pb-4 mb-9"
 			>
-				<h3 class="text-[2rem] font-bodoni font-bold">Popolari</h3>
+				<h3 class="text-[2rem] font-newsreader font-bold">Popolari</h3>
 				<!-- <p>Poster width: {{ posterWidth }}</p> -->
 				<NuxtLink
 					to="/populars"
@@ -46,7 +46,7 @@
 			<div
 				class="flex items-center justify-between border-b border-border-hairline pb-4 mb-9"
 			>
-				<h3 class="text-[2rem] font-bodoni font-bold">I più votati</h3>
+				<h3 class="text-[2rem] font-newsreader font-bold">I più votati</h3>
 				<NuxtLink
 					to="/topRated"
 					class="flex items-center gap-2 font-mono text-xs text-text-secondary tracking-wider hover:text-accent-gold transition-colors cursor-pointer"
@@ -70,7 +70,7 @@
 			<div
 				class="flex items-center justify-between border-b border-border-hairline pb-4 mb-9"
 			>
-				<h3 class="text-[2rem] font-bodoni font-bold">Ora al cinema</h3>
+				<h3 class="text-[2rem] font-newsreader font-bold">Ora al cinema</h3>
 				<NuxtLink
 					to="/nowPlaying"
 					class="flex items-center gap-2 font-mono text-xs text-text-secondary tracking-wider hover:text-accent-gold transition-colors cursor-pointer"
@@ -94,7 +94,7 @@
 			<div
 				class="flex items-center justify-between border-b border-border-hairline pb-4 mb-9"
 			>
-				<h3 class="text-[2rem] font-bodoni font-bold">Prossimamente</h3>
+				<h3 class="text-[2rem] font-newsreader font-bold">Prossimamente</h3>
 				<NuxtLink
 					to="/upcoming"
 					class="flex items-center gap-2 font-mono text-xs text-text-secondary tracking-wider hover:text-accent-gold transition-colors cursor-pointer"

@@ -31,7 +31,9 @@
 			</div>
 		</div>
 		<div class="info">
-			<p class="title font-bodoni text-lg font-medium text-accent-gold mb-2">
+			<p
+				class="title font-newsreader text-lg font-medium text-accent-gold mb-2"
+			>
 				{{ movie.title }}
 			</p>
 			<div class="flex items-center gap-2 mb-2">

@@ -30,6 +30,10 @@
 	import '@fontsource-variable/bodoni-moda/opsz.css';
 	import '@fontsource-variable/bodoni-moda/wght-italic.css';
 	import '@fontsource-variable/jetbrains-mono';
+	import '@fontsource-variable/newsreader';
+	import '@fontsource-variable/newsreader/opsz-italic.css';
+	import '@fontsource-variable/newsreader/opsz.css';
+	import '@fontsource-variable/newsreader/wght-italic.css';
 </script>
 
 <template>

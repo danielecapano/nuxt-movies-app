@@ -13,7 +13,7 @@
 		</figure>
 		<div class="hero-content">
 			<h3
-				class="hero-title font-bodoni italic text-6xl text-gold-400 text-shadow-xs mb-1"
+				class="hero-title font-newsreader font-medium italic text-6xl text-gold-400 text-shadow-xs mb-1"
 			>
 				{{ movie.title }}
 			</h3>

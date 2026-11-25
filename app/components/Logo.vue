@@ -36,8 +36,8 @@
         </g>
     </g>
 </svg> -->
-	<h2 class="font-bodoni text-5xl font-extrabold text-gold-400">
-		<span class="italic font-normal text-ivory-200">my</span>Movie
+	<h2 class="font-newsreader text-5xl font-bold text-gold-400">
+		<span class="italic font-light text-ivory-200">my</span>Movie
 	</h2>
 </template>
 
